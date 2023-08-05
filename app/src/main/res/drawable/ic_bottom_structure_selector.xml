@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 선택될 때의 아이콘 -->
+    <item android:drawable="@drawable/ic_bottom_structure_selected" android:state_selected="true" />
+    <!-- 기본 아이콘 -->
+    <item android:drawable="@drawable/ic_bottom_structure_no_select" />
+</selector>

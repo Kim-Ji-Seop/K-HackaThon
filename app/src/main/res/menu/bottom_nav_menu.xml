@@ -4,29 +4,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/subscribeFragment"
-        android:icon="@drawable/ic_bottom_heart_no_select"
+        android:icon="@drawable/ic_bottom_heart_selector"
         android:title="찜"
         app:showAsAction="always"/>
     <item
         android:id="@+id/structureFragment"
-        android:icon="@drawable/ic_bottom_structure_no_select"
+        android:icon="@drawable/ic_bottom_structure_selector"
         android:title="매물"
         app:showAsAction="always" />
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_bottom_home_no_select"
+        android:icon="@drawable/ic_bottom_home_selector"
         android:enabled="true"
         android:title="홈"
         app:showAsAction="always"
         tools:ignore="AlwaysShowAction"/>
     <item
         android:id="@+id/chatFragment"
-        android:icon="@drawable/ic_bottom_chat_no_select"
+        android:icon="@drawable/ic_bottom_chat_selector"
         android:title="채팅"
         app:showAsAction="always" />
     <item
         android:id="@+id/myPageFragment"
-        android:icon="@drawable/ic_bottom_mypage_no_select"
+        android:icon="@drawable/ic_bottom_mypage_selector"
         android:title="마이페이지"
         app:showAsAction="always" />
 </menu>

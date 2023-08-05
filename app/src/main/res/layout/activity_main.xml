@@ -6,20 +6,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_header_js"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="13dp"
+        >
+
+        <TextView
+            android:id="@+id/main_header_text_js"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/header_text"
+            android:textStyle="bold"
+            android:textAppearance="@style/main_header_text_js"
+            android:lineSpacingExtra="0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_header_js"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_main_header_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_header_js"
+            app:layout_constraintEnd_toEndOf="@+id/main_header_js"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <FrameLayout
         android:id="@+id/main_frm_js"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/main_bnv_js"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/main_header_js"
+        app:layout_constraintBottom_toTopOf="@id/main_bnv_js"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_bnv_js"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemIconSize="20dp"
-        app:itemIconTint="@drawable/btn_color_selector"
-        app:itemTextColor="@drawable/btn_color_selector"
+        android:elevation="15dp"
+        app:itemIconTint="@drawable/bnv_icon_color_selector"
+        app:itemTextColor="@drawable/bnv_text_color_selector"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
