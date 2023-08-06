@@ -4,16 +4,31 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/banner.xml" value="0.3105" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/bnv_icon_color_selector.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/bnv_text_color_selector.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/btn_color_selector.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/category.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/category_btn_color_selector.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/category_no_select.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_chat_no_select.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_chat_selected.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_chat_selector.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_heart_no_select.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_heart_selected.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_heart_selector.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_home_no_select.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_home_selected.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_home_selector.xml" value="0.3105" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_mypage_no_select.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_mypage_selected.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_mypage_selector.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_structure_no_select.xml" value="0.306" />
-        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/activity_main.xml" value="0.2606527651858567" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_structure_selected.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_shortcut_forward.xml" value="0.3105" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_star_mark_blue.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_chat.xml" value="0.33" />
-        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_home.xml" value="0.3482789855072464" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_my_page.xml" value="0.3482789855072464" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3671875" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/KHackaThon/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1985" />

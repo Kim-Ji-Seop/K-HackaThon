@@ -4,4 +4,27 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="header_text">울산광역시 무거동</string>
     <string name="check_list">Check list</string>
+    <string name="banner_text_view">부동산 거래 시</string>
+    <string name="banner_text_view_2">유의사항</string>
+    <string name="banner_text_view_3">살펴볼까요?</string>
+    <string name="shortcut">바로가기</string>
+    <string name="category_title">인기매물</string>
+    <string name="category_contents">인기있는 복층매물</string>
+    <string name="total_struct">전체 매물</string>
+    <string name="label">복층</string>
+    <string name="label_2">적은 월세</string>
+    <string name="label_3">조용함</string>
+    <string name="label_4">벌레 없음</string>
+    <string name="building_name">라임 빌라</string>
+    <string name="building_room_count">원룸</string>
+    <string name="live_period">3개월</string>
+    <string name="deposit_label_text">보증금</string>
+    <string name="deposit_price">100만</string>
+    <string name="monthly_rent_label_text">월세</string>
+    <string name="monthly_rent_price">40만</string>
+    <string name="management_amount_label_text">관리금</string>
+    <string name="management_amount_price">10만원</string>
+    <string name="floor_space_number">13</string>
+    <string name="floor_space_number_label_text">평</string>
+    <string name="building_addr">울산 남구 무거동 대학로 23번길 12</string>
 </resources>
