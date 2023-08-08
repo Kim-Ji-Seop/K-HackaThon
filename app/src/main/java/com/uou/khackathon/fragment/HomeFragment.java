@@ -7,6 +7,8 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.CompositePageTransformer;
+import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
@@ -48,10 +50,25 @@ public class HomeFragment extends Fragment {
         category1.setSelected(true);
         // 데이터 초기화
         initBuildingData();
-
+        int pageMargin = getResources().getDimensionPixelOffset(R.dimen.page_margin);
+        int pageOffset = getResources().getDimensionPixelOffset(R.dimen.offset);
         // ViewPager2 초기화
         viewPager2 = view.findViewById(R.id.view_pager2_cardview);
-        viewPager2.addItemDecoration(new ViewPager2MarginDecoration(8));
+        viewPager2.setOffscreenPageLimit(3);  // 한 번에 3개의 아이템을 로드
+        viewPager2.setPadding(pageOffset, 0, pageOffset, 0);
+
+        viewPager2.setPageTransformer(new ViewPager2.PageTransformer() {
+            @Override
+            public void transformPage(@NonNull View page, float position) {
+                // Margin 변환
+                float marginTransformValue = -pageMargin * position;
+                page.setTranslationX(marginTransformValue);
+
+                // Scale 변환
+                //float scaleFactor = 0.85f + (1 - Math.abs(position)) * 0.15f;
+                //page.setScaleY(scaleFactor);
+            }
+        });
         viewPager2.setAdapter(new BuildingAdapter(buildings));
 
 

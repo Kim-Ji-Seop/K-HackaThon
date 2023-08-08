@@ -27,11 +27,16 @@
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_shortcut_forward.xml" value="0.3105" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_star_mark_blue.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_validation_star.xml" value="0.249" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/one_digit.xml" value="0.245" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/profile.xml" value="0.245" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/rounded_rectangle.xml" value="0.249" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/rounded_rectangle_selector.xml" value="0.249" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/three_digits.xml" value="0.245" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/two_digits.xml" value="0.245" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/font/app_font.xml" value="0.32877297990594273" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_chat.xml" value="0.33" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/chat_list_item.xml" value="0.5" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_chat.xml" value="0.22" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_home.xml" value="0.5044642857142857" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_my_page.xml" value="0.3482789855072464" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/home_viewpager2_item.xml" value="0.5044642857142857" />

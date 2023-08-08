@@ -71,29 +71,29 @@
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
         android:scrollbars="none"
-        app:layout_constraintEnd_toEndOf="@+id/shortcut_total_struct"
         app:layout_constraintStart_toStartOf="@+id/category_contents"
         app:layout_constraintTop_toBottomOf="@+id/category_contents">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingEnd="10dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/category_1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
-                android:paddingHorizontal="17dp"
-                android:background="@drawable/rounded_rectangle_selector">
+                android:background="@drawable/rounded_rectangle_selector"
+                android:paddingHorizontal="17dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_light"
                     android:text="@string/label"
                     android:textAppearance="@style/label"
-                    android:fontFamily="@font/pretendard_light"
                     android:textColor="@color/text_color_selector"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -106,14 +106,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
-                android:paddingHorizontal="17dp"
-                android:background="@drawable/rounded_rectangle_selector">
+                android:background="@drawable/rounded_rectangle_selector"
+                android:paddingHorizontal="17dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_light"
                     android:text="@string/label_2"
                     android:textAppearance="@style/label"
-                    android:fontFamily="@font/pretendard_light"
                     android:textColor="@color/text_color_selector"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -126,15 +127,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
-                android:paddingHorizontal="17dp"
-                android:background="@drawable/rounded_rectangle_selector">
+                android:background="@drawable/rounded_rectangle_selector"
+                android:paddingHorizontal="17dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/pretendard_light"
                     android:text="@string/label_3"
                     android:textAppearance="@style/label"
-                    android:fontFamily="@font/pretendard_light"
                     android:textColor="@color/text_color_selector"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -147,14 +148,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
-                android:paddingHorizontal="17dp"
-                android:background="@drawable/rounded_rectangle_selector">
+                android:background="@drawable/rounded_rectangle_selector"
+                android:paddingHorizontal="17dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_4"
                     android:fontFamily="@font/pretendard_light"
+                    android:text="@string/label_4"
                     android:textAppearance="@style/label"
                     android:textColor="@color/text_color_selector"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -162,19 +163,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/category_5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="8dp"
-                android:paddingHorizontal="17dp"
-                android:background="@drawable/rounded_rectangle_selector">
+                android:background="@drawable/rounded_rectangle_selector"
+                android:paddingHorizontal="17dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_5"
                     android:fontFamily="@font/pretendard_light"
+                    android:text="@string/label_5"
                     android:textAppearance="@style/label"
                     android:textColor="@color/text_color_selector"
                     app:layout_constraintBottom_toBottomOf="parent"

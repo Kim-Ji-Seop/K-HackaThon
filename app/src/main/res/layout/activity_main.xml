@@ -21,12 +21,24 @@
             android:id="@+id/main_header_text_js"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_medium"
             android:text="@string/header_text"
             android:textAppearance="@style/main_header_text_js"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:fontFamily="@font/pretendard_medium"
-            app:layout_constraintTop_toTopOf="@+id/main_header_js"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_header_js" />
         <ImageView
+            android:id="@+id/main_header_make"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_make"
+            android:layout_marginEnd="12dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="@+id/main_header_js"
+            app:layout_constraintBottom_toBottomOf="@id/main_header_js"
+            app:layout_constraintEnd_toStartOf="@+id/main_header_search"/>
+        <ImageView
+            android:id="@+id/main_header_search"
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:src="@drawable/iv_main_header_search"

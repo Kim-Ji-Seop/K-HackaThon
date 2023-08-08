@@ -9,10 +9,6 @@
                 android:bottomLeftRadius="18dp"
                 android:bottomRightRadius="18dp" />
             <solid android:color="#297BF5" />
-            <gradient
-                android:startColor="#297BF5"
-                android:endColor="#2674E1"
-                android:angle="270"/>
             <size android:width="62dp" android:height="36dp" />
         </shape>
     </item>
@@ -26,10 +22,6 @@
                 android:bottomLeftRadius="18dp"
                 android:bottomRightRadius="18dp" />
             <solid android:color="#F2F3F5" />
-            <gradient
-                android:startColor="#F2F3F5"
-                android:endColor="#E7E8EA"
-                android:angle="270"/>
             <size android:width="62dp" android:height="36dp" />
         </shape>
     </item>
