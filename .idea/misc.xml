@@ -26,10 +26,15 @@
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_bottom_structure_selected.xml" value="0.306" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_shortcut_forward.xml" value="0.3105" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_star_mark_blue.xml" value="0.306" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/ic_validation_star.xml" value="0.249" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/rounded_rectangle.xml" value="0.249" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/drawable/rounded_rectangle_selector.xml" value="0.249" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/font/app_font.xml" value="0.32877297990594273" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_chat.xml" value="0.33" />
-        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_home.xml" value="0.5044642857142857" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/fragment_my_page.xml" value="0.3482789855072464" />
+        <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/layout/home_viewpager2_item.xml" value="0.5044642857142857" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/K-HackaThon/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3671875" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/KHackaThon/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1985" />
         <entry key="..\:/Users/jskim/AndroidStudioProjects/KHackaThon/app/src/main/res/drawable/btn_color_selector.xml" value="0.1985" />
