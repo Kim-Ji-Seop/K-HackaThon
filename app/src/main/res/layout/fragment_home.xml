@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="100dp"
     tools:context=".fragment.HomeFragment">
 
     <!-- Auto layout, variables, and unit scale are not yet supported -->

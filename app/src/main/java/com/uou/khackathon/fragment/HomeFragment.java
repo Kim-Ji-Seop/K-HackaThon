@@ -1,5 +1,7 @@
 package com.uou.khackathon.fragment;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.uou.khackathon.R;
@@ -78,6 +82,8 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        // 원래의 헤더 색상 복원
+
         // 카테고리 선택
         List<ConstraintLayout> allCategories = Arrays.asList(category1, category2, category3, category4, category5);
         // 각 항목에 클릭 리스너 설정
@@ -97,6 +103,11 @@ public class HomeFragment extends Fragment {
                 }
             });
         }
+    }
+    // 색상이 어두운지 밝은지 판별하는 유틸리티 함수
+    private boolean isColorDark(int color) {
+        double darkness = 1 - (0.299 * Color.red(color) + 0.587 * Color.green(color) + 0.114 * Color.blue(color)) / 255;
+        return darkness >= 0.5;
     }
 
     private void initBuildingData() {
