@@ -28,6 +28,7 @@ import com.uou.khackathon.fragment.SubscribeFragment;
 
 public class MainActivity extends AppCompatActivity {
     private ConstraintLayout headerLayout;
+    private ConstraintLayout topBarLayout;
     private HomeFragment homeFragment;
     private StructureFragment structureFragment;
     private ChatFragment chatFragment;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
         currentFragment = homeFragment;
     }
+
     // 프래그먼트 초기화
     private void initFragments() {
         homeFragment = new HomeFragment();
@@ -81,7 +83,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // 뷰 초기화 및 높이 설정
-    private void initView(){
+    private void initView() {
+        topBarLayout = findViewById(R.id.top_bar);
         headerLayout = findViewById(R.id.main_header_js);
         headerText = findViewById(R.id.main_header_text_js);
         mainHeaderMakeView = findViewById(R.id.main_header_make);
@@ -96,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     // 네이버 맵 SDK 초기화
     private void initNaverMapSdk() {
         String clientId = getResources().getString(R.string.NAVER_CLIENT_ID);
-        if(clientId == null || clientId.isEmpty()) { // Naver Map Api 실행 오류 시
+        if (clientId == null || clientId.isEmpty()) { // Naver Map Api 실행 오류 시
             new AlertDialog.Builder(this)
                     .setTitle("오류")
                     .setMessage("Naver Map SDK 초기화에 실패했습니다. 앱을 다시 시작해주세요.")
@@ -119,28 +122,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // 네비게이션 아이템 선택 시 프래그먼트 전환 및 헤더 속성 변경
-    private boolean onNavigationItemSelected(@NonNull MenuItem item){
+    private boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment targetFragment;
         switch (item.getItemId()) {
             case R.id.homeFragment:
                 targetFragment = homeFragment;
                 setHeaderProperties("울산광역시 무거동", Color.WHITE, View.INVISIBLE);
+                setTopBarProperties(View.GONE);
                 break;
             case R.id.structureFragment:
                 targetFragment = structureFragment;
                 setHeaderProperties("매물 목록", getTranslucentColor(), View.VISIBLE);
+                setTopBarProperties(View.VISIBLE);
                 break;
             case R.id.subscribeFragment:
                 targetFragment = subscribeFragment;
                 setHeaderProperties("찜 목록", Color.WHITE, View.INVISIBLE);
+                setTopBarProperties(View.GONE);
                 break;
             case R.id.chatFragment:
                 targetFragment = chatFragment;
                 setHeaderProperties("채팅 목록", Color.WHITE, View.INVISIBLE);
+                setTopBarProperties(View.GONE);
                 break;
             case R.id.myPageFragment:
                 targetFragment = myPageFragment;
                 setHeaderProperties("내 정보", Color.WHITE, View.INVISIBLE);
+                setTopBarProperties(View.GONE);
                 break;
             default:
                 targetFragment = homeFragment;
@@ -165,6 +173,11 @@ public class MainActivity extends AppCompatActivity {
         headerLayout.setBackgroundColor(color);
         mainHeaderMakeView.setVisibility(visibility);
         adjustHeaderForStatusBar();
+    }
+
+    private void setTopBarProperties(int visibility) {
+        topBarLayout.setBackgroundColor(getTranslucentColor());
+        topBarLayout.setVisibility(visibility);
     }
 
     // 81% 투명도의 색을 반환

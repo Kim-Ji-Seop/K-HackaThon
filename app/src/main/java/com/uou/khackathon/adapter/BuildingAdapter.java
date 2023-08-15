@@ -33,12 +33,12 @@ public class BuildingAdapter extends RecyclerView.Adapter<BuildingAdapter.Buildi
     @Override
     public void onBindViewHolder(@NonNull BuildingViewHolder holder, int position) {
         Building building = buildingList.get(position);
-        if(building == null) {
-            // 예외 처리: Building 객체가 null인 경우
-            return;
+        if (building != null) {
+            bindData(holder, building);
         }
+    }
 
-        // 데이터 바인딩
+    private void bindData(BuildingViewHolder holder, Building building) {
         holder.buildingName.setText(building.getName());
         holder.buildingRoomCount.setText(building.getRoomCount());
         holder.buildingLivePeriod.setText(building.getLivePeriod());

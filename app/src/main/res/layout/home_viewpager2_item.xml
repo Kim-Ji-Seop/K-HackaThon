@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/view_pager_frame_card_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardview"
         android:layout_width="0dp"
         android:layout_height="270dp"
-        app:cardElevation="2dp"
-        app:cardCornerRadius="8dp"
         android:layout_marginVertical="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/view_pager_frame_card_view"
         app:layout_constraintEnd_toEndOf="@+id/view_pager_frame_card_view"
         app:layout_constraintStart_toStartOf="@+id/view_pager_frame_card_view"
         app:layout_constraintTop_toTopOf="@+id/view_pager_frame_card_view">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -257,23 +258,24 @@
                 android:id="@+id/white_circle"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:background="@drawable/white_circle_vector"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="100dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@+id/linearLayout"/>
+                android:background="@drawable/white_circle_vector"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent" />
+
             <ToggleButton
                 android:id="@+id/heart_selector"
                 android:layout_width="27dp"
                 android:layout_height="27dp"
-                android:textOn=""
-                android:textOff=""
-                android:text=""
                 android:background="@drawable/ic_heart_selector"
-                app:layout_constraintTop_toTopOf="@+id/white_circle"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
                 app:layout_constraintBottom_toBottomOf="@+id/white_circle"
+                app:layout_constraintEnd_toEndOf="@+id/white_circle"
                 app:layout_constraintStart_toStartOf="@+id/white_circle"
-                app:layout_constraintEnd_toEndOf="@+id/white_circle"/>
+                app:layout_constraintTop_toTopOf="@+id/white_circle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

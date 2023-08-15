@@ -32,4 +32,5 @@
     <string name="user_receive_chat">안녕하세요 원룸 관련 문의 드립니다. 월세와 보증금 관련해서</string>
     <string name="chat_receive_time">오후 9:36</string>
     <string name="chat_receive_count_text">4</string>
+    <string name="location_si_gu">울산광역시 남구</string>
 </resources>

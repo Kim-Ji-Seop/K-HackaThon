@@ -43,48 +43,44 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     @NonNull
     @Override
     public ChatListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        Context context = parent.getContext() ;
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
-
-        View view = inflater.inflate(R.layout.chat_list_item, parent, false);
-        ChatListAdapter.ViewHolder vh = new ChatListAdapter.ViewHolder(view) ;
-
-        return vh;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_list_item, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ChatListAdapter.ViewHolder holder, int position) {
-        String number = result.get(position).getChatCount();
-        int chatCount;
-        holder.name.setText(result.get(position).getName());
-        holder.time.setText(result.get(position).getTime());
-        holder.chatContents.setText(result.get(position).getChatContents());
+        ChatList currentItem = result.get(position);
 
+        holder.name.setText(currentItem.getName());
+        holder.time.setText(currentItem.getTime());
+        holder.chatContents.setText(currentItem.getChatContents());
 
-        if(!result.get(position).isValid()){ // 인증된 유저가 아닐때
+        if (!currentItem.isValid()) {
             holder.validMark.setVisibility(View.INVISIBLE);
         }
-        if(number.equals("")){
-            chatCount = 0;
-        }else{
-            chatCount = Integer.parseInt(number);
-        }
-        if(chatCount == 0){
+        setChatCountDisplay(holder, currentItem);
+    }
+
+    private void setChatCountDisplay(ViewHolder holder, ChatList chatList) {
+        String number = chatList.getChatCount();
+        int chatCount = (number.isEmpty()) ? 0 : Integer.parseInt(number);
+
+        if (chatCount == 0) {
             holder.countCoverImage.setVisibility(View.GONE);
+            return;
         }
-        else if (chatCount < 10) {
-            holder.chatCount.setText(result.get(position).getChatCount());
+
+        if (chatCount < 10) {
+            holder.chatCount.setText(number);
             holder.countCoverImage.setImageResource(R.drawable.one_digit);
         } else if (chatCount < 100) {
-            holder.chatCount.setText(result.get(position).getChatCount());
+            holder.chatCount.setText(number);
             holder.countCoverImage.setImageResource(R.drawable.two_digits);
         } else {
             holder.chatCount.setText("99+");
             holder.countCoverImage.setImageResource(R.drawable.three_digits);
         }
-
     }
-
     @Override
     public int getItemCount() {
         return result.size();

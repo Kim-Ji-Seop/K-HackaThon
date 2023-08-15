@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,16 +7,16 @@
     android:paddingTop="100dp"
     tools:context=".fragment.HomeFragment">
 
-    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/banner"
         android:layout_width="0dp"
         android:layout_height="230dp"
-        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/banner"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -27,8 +26,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="@string/category_title"
         android:fontFamily="@font/pretendard_medium"
+        android:text="@string/category_title"
         android:textAppearance="@style/category_title"
         app:layout_constraintStart_toStartOf="@+id/banner"
         app:layout_constraintTop_toBottomOf="@+id/banner" />
@@ -38,9 +37,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
+        android:fontFamily="@font/pretendard_medium"
         android:lineSpacingExtra="5sp"
         android:text="@string/category_contents"
-        android:fontFamily="@font/pretendard_medium"
         android:textAppearance="@style/category_contents"
         app:layout_constraintStart_toStartOf="@+id/category_title"
         app:layout_constraintTop_toBottomOf="@+id/category_title" />
@@ -49,8 +48,8 @@
         android:id="@+id/total_struct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/total_struct"
         android:fontFamily="@font/pretendard_medium"
+        android:text="@string/total_struct"
         android:textAppearance="@style/total_struct"
         app:layout_constraintBottom_toBottomOf="@+id/category_contents"
         app:layout_constraintEnd_toStartOf="@+id/shortcut_total_struct"
