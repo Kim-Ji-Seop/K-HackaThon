@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,12 +26,14 @@ import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.uou.khackathon.R;
+import com.uou.khackathon.activity.MainActivity;
 
 /**
  * onRequestPermissionsResult -> 이 함수 Deprecated 되었음, 쓰면 안됨.
@@ -41,9 +44,13 @@ public class StructureFragment extends Fragment implements OnMapReadyCallback {
             | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
             | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
 
+    // 지도
     private NaverMap naverMap;
     private ActivityResultLauncher<String> requestPermissionLauncher;
     private FusedLocationProviderClient fusedLocationClient;
+
+    // 뷰
+    private ExtendedFloatingActionButton floatingButton;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,6 +60,7 @@ public class StructureFragment extends Fragment implements OnMapReadyCallback {
 
         // Naver Map Fragment
         setupMapFragment();
+        initView(rootView);
 
         return rootView;
     }
@@ -73,6 +81,23 @@ public class StructureFragment extends Fragment implements OnMapReadyCallback {
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity());
     }
 
+    private void initView(View view) {
+        floatingButton = view.findViewById(R.id.go_to_list_fb);
+        floatingButton.setOnClickListener(v -> switchToStructureListFragment());
+    }
+
+    private void switchToStructureListFragment() {
+        StructureListFragment structureListFragment = new StructureListFragment();
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_frm_js, structureListFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+
+        // Update the current fragment in MainActivity
+        if (getActivity() instanceof MainActivity) {
+            ((MainActivity) getActivity()).setCurrentFragment(structureListFragment);
+        }
+    }
     // 지도 프래그먼트 설정
     private void setupMapFragment() {
         FragmentManager fm = getChildFragmentManager();

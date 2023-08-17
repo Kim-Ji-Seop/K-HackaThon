@@ -8,10 +8,12 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,6 +26,7 @@ import com.uou.khackathon.fragment.ChatFragment;
 import com.uou.khackathon.fragment.HomeFragment;
 import com.uou.khackathon.fragment.MyPageFragment;
 import com.uou.khackathon.fragment.StructureFragment;
+import com.uou.khackathon.fragment.StructureListFragment;
 import com.uou.khackathon.fragment.SubscribeFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -124,35 +127,37 @@ public class MainActivity extends AppCompatActivity {
     // 네비게이션 아이템 선택 시 프래그먼트 전환 및 헤더 속성 변경
     private boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Fragment targetFragment;
+
         switch (item.getItemId()) {
             case R.id.homeFragment:
                 targetFragment = homeFragment;
                 setHeaderProperties("울산광역시 무거동", Color.WHITE, View.INVISIBLE);
-                setTopBarProperties(View.GONE);
+                setTopBarProperties(Color.WHITE,View.GONE);
                 break;
             case R.id.structureFragment:
                 targetFragment = structureFragment;
                 setHeaderProperties("매물 목록", getTranslucentColor(), View.VISIBLE);
-                setTopBarProperties(View.VISIBLE);
+                setTopBarProperties(getTranslucentColor(),View.VISIBLE);
                 break;
             case R.id.subscribeFragment:
                 targetFragment = subscribeFragment;
                 setHeaderProperties("찜 목록", Color.WHITE, View.INVISIBLE);
-                setTopBarProperties(View.GONE);
+                setTopBarProperties(Color.WHITE,View.GONE);
                 break;
             case R.id.chatFragment:
                 targetFragment = chatFragment;
                 setHeaderProperties("채팅 목록", Color.WHITE, View.INVISIBLE);
-                setTopBarProperties(View.GONE);
+                setTopBarProperties(Color.WHITE,View.GONE);
                 break;
             case R.id.myPageFragment:
                 targetFragment = myPageFragment;
                 setHeaderProperties("내 정보", Color.WHITE, View.INVISIBLE);
-                setTopBarProperties(View.GONE);
+                setTopBarProperties(Color.WHITE,View.GONE);
                 break;
             default:
                 targetFragment = homeFragment;
         }
+
         switchFragment(targetFragment);
         return true;
     }
@@ -168,15 +173,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // 헤더의 제목, 배경색, 가시성 및 상태바에 대한 높이 조절 설정
-    private void setHeaderProperties(String title, int color, int visibility) {
+    public void setHeaderProperties(String title, int color, int visibility) {
         headerText.setText(title);
         headerLayout.setBackgroundColor(color);
         mainHeaderMakeView.setVisibility(visibility);
         adjustHeaderForStatusBar();
     }
 
-    private void setTopBarProperties(int visibility) {
-        topBarLayout.setBackgroundColor(getTranslucentColor());
+    public void setTopBarProperties(int color,int visibility) {
+        topBarLayout.setBackgroundColor(color);
         topBarLayout.setVisibility(visibility);
     }
 
@@ -210,5 +215,23 @@ public class MainActivity extends AppCompatActivity {
             statusBarHeight = getResources().getDimensionPixelSize(resourceId);
         }
         return statusBarHeight;
+    }
+
+    public void setCurrentFragment(Fragment currentFragment) {
+        this.currentFragment = currentFragment;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mainHeaderMakeView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, StructureRegisterActivity.class);
+
+                // 새로운 Activity를 시작
+                startActivity(intent);
+            }
+        });
     }
 }

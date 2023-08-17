@@ -121,4 +121,43 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#000000</item>
     </style>
+    <style name="structure_register_header_text_js">
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="structure_register_picture_upload_js">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#1F2021</item>
+    </style>
+    <style name="structure_register_picture_upload_max_js">
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#6F7075</item>
+    </style>
+    <style name="address_search_btn_js">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#0054D0</item>
+    </style>
+    <style name="address_detail_hint">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#98989E</item>
+    </style>
+    <style name="option_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">#5C5D61</item>
+    </style>
+    <style name="structure_register_btn_disabled_js">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#5C5D61</item>
+    </style>
+    <style name="structure_register_btn_enabled_js">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
 </resources>

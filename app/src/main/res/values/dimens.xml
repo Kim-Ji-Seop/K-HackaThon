@@ -2,4 +2,5 @@
 <resources>
     <dimen name="page_margin">-10dp</dimen>
     <dimen name="offset">20dp</dimen>
+    <dimen name="button_padding">22dp</dimen>
 </resources>
